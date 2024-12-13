@@ -49,7 +49,7 @@ export default async function getDrinkByFirstLetter(letter: string) {
     `https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${letter}`
   );
   const result = (await res.json()) as Drinks;
-  console.log("result", result);
+  // console.log("result", result);
 
   const data = result.drinks.map((d) => {
     // console.log("d", d);
@@ -60,7 +60,7 @@ export default async function getDrinkByFirstLetter(letter: string) {
   const drink: Cocktail[] = data.map((drink) => {
     return {
       idDrink: drink.idDrink,
-      strDrink: drink.strAlcoholic,
+      strDrink: drink.strDrink,
       strCategory: drink.strCategory,
       strAlcoholic: drink.strAlcoholic,
       strGlass: drink.strGlass,

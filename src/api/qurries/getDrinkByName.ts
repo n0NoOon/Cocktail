@@ -60,7 +60,7 @@ export default async function getDrinkByName(keyword: string) {
   const drink: Cocktail[] = data.map((drink) => {
     return {
       idDrink: drink.idDrink,
-      strDrink: drink.strAlcoholic,
+      strDrink: drink.strDrink,
       strCategory: drink.strCategory,
       strAlcoholic: drink.strAlcoholic,
       strGlass: drink.strGlass,
